@@ -1,0 +1,40 @@
+.app-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: clamp(1.1rem, 2dvh, 1.75rem);
+}
+
+:is(.header, .stage, .gender-switch, #summary-info, #hover-info) {
+  transition: opacity .75s cubic-bezier(.16, 1, .3, 1), transform .75s cubic-bezier(.16, 1, .3, 1);
+}
+
+body.is-empty :is(.header, .stage, .gender-switch, #summary-info, #hover-info) {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+}
+
+body.is-empty .gender-switch {
+  display: none !important;
+}
+
+body.is-empty .controls {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: .6em;
+  font-size: clamp(1.4rem, 2.4vw, 2.5rem);
+}
+
+body.is-empty #bday-toggle {
+  color: var(--text-muted);
+  pointer-events: none;
+}

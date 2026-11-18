@@ -1,0 +1,9 @@
+export {
+  DEFAULT_HOVER_HINT,
+  STORAGE_KEYS,
+  LIFE_EXPECTANCY,
+  SCALES,
+  BOARD_GRID_DIMS,
+  TICKER_DECIMALS,
+  COLORS,
+} from "./constants.js";

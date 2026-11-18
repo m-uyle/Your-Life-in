@@ -1,0 +1,23 @@
+.gender-switch {
+  margin-left: clamp(0.75rem, 1.1vw, 1.15rem);
+}
+
+.gender-switch .sep {
+  margin: 0 0.14em;
+}
+
+.gender-btn {
+  font-style: italic;
+  color: var(--text-dim);
+  padding: 0 0.04em;
+  vertical-align: baseline;
+  transition: color 0.15s ease-out;
+}
+
+.gender-btn:hover {
+  color: var(--text-muted);
+}
+
+.gender-btn.is-active {
+  color: var(--text-main);
+}

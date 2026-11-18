@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Your Life in…</title>
+  <meta name="description" content="Interactive visualization of a human life across multiple scales: seconds, minutes, hours, days, weeks, months, and years.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <meta property="og:title" content="Your Life in…">
+  <meta property="og:description" content="Interactive life calendar and timeline visualization in seconds, minutes, hours, days, weeks, months, and years.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Your Life in…">
+  <meta name="twitter:description" content="Interactive life calendar and timeline visualization.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/app/styles/index.css">
+</head>
+<body>
+  <div class="app-container"><header class="header" id="app-header"><h1 class="main-title">Your Life in…</h1><div class="scale-nav" id="scale-nav" role="tablist" aria-label="Units of time"></div></header><div class="stage" id="stage"><main class="board" id="board" role="tabpanel" aria-label="Life map" hidden></main><section class="lens" id="lens" role="tabpanel" aria-label="Your whole life, and the present moment magnified" hidden><div class="lens-stack" id="lens-stack"></div><div class="lens-strip"><div class="lens-strip-head"><div class="lens-title-group" id="lens-target-title"></div><div class="lens-title-group cascade-head-right" id="lens-target-cap"></div></div><div class="lens-cv-wrap" id="lens-cv-wrap"><canvas id="lens-canvas" tabindex="0" role="img" aria-label="Magnified time grid. Use arrow keys to inspect cells."></canvas></div></div></section></div><footer class="footer"><div class="controls" id="controls"><button type="button" id="bday-toggle" aria-pressed="false" data-tip="Highlight birthdays (switches to Days)">Date of birth</button><div class="birth-fields" id="birth-fields" role="group" aria-label="Date of birth"><span class="fld" data-p="DD" data-d="00"><input id="birth-day" inputmode="numeric" autocomplete="off" maxlength="2" placeholder="DD" aria-label="Day of birth"></span><span class="sep">/</span><span class="fld" data-p="MM" data-d="00"><input id="birth-month" inputmode="numeric" autocomplete="off" maxlength="2" placeholder="MM" aria-label="Month of birth"></span><span class="sep">/</span><span class="fld" data-p="YYYY" data-d="0000"><input id="birth-year" inputmode="numeric" autocomplete="off" maxlength="4" placeholder="YYYY" aria-label="Year of birth"></span></div><div class="gender-switch" id="gender-switch" role="group" aria-label="Average life expectancy marker"><button type="button" class="gender-btn" id="gender-m" aria-pressed="false" data-tip="Global life expectancy: Male (~71.2 yrs)">Male</button><span class="sep">/</span><button type="button" class="gender-btn" id="gender-f" aria-pressed="false" data-tip="Global life expectancy: Female (~76.4 yrs)">Female</button></div></div><div class="ticker-container" id="summary-info" aria-live="off"><span class="ticker-main"><span class="ticker-int" id="t-int"></span><span class="ticker-frac" id="t-frac"></span> <span class="ticker-unit" id="t-unit"></span><span class="ticker-desc">lived of</span> <span class="ticker-total" id="t-total"></span><span class="ticker-sep">|</span> <span class="ticker-pct-int" id="t-p-int"></span><span class="ticker-pct-frac" id="t-p-frac"></span><span class="ticker-pct-sign">%</span></span></div><div id="hover-info" aria-live="polite"></div></footer></div><div id="tip" role="tooltip"></div>
+  <script type="module" src="./src/app/index.js" onerror="const s=document.createElement('script');s.src='./dist/bundle.js';document.body.appendChild(s)"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.board {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: clamp(.35rem, 1.1vw, 2.25rem);
+  align-items: stretch;
+  contain: layout style;
+}
+
+.decade-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .2rem;
+  min-width: 0;
+  width: 100%;
+  contain: layout style;
+}
+
+.decade-label {
+  font-style: italic;
+  font-size: var(--fs-label);
+  line-height: 1;
+  color: var(--text-muted);
+  text-align: right;
+  padding-right: .15rem;
+}
+
+canvas.decade-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  contain: paint;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}

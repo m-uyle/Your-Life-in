@@ -1,0 +1,32 @@
+:root {
+  /* Surfaces & Backgrounds */
+  --bg: #0a0a0a;
+  --bg-empty: #000000;
+  --surface-elevated: #212121;
+  --surface-subtle: #141414;
+
+  /* Borders & Focus */
+  --border-subtle: #212121;
+  --border-hover: #787878;
+
+  /* Typography Colors */
+  --text-main: #f0f0f0;
+  --text-muted: #b5b5b5;
+  --text-dim: #999999;
+  --text-frac: #888888;
+
+  /* Accents & Highlights */
+  --accent-lived: #e03b3b;
+  --accent-future: #872525;
+
+  /* Shadows */
+  --shadow-tooltip: 0 8px 28px rgb(0 0 0 / 0.35), 0 2px 8px rgb(0 0 0 / 0.2);
+
+  /* Typography Scales */
+  --fs-title: clamp(2rem, 3.2vw, 3.5rem);
+  --fs-label: clamp(1rem, 1.35vw, 1.75rem);
+  --fs-ui: clamp(0.95rem, 0.95vw, 1.25rem);
+  --fs-metric: 1.45em;
+
+  font-size: clamp(100%, 0.65rem + 0.45vw, 175%);
+}

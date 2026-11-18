@@ -1,0 +1,24 @@
+.scale-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.45rem, 0.9vw, 1.25rem);
+  padding: 0 0.5rem;
+}
+
+.scale-tab {
+  font-size: var(--fs-ui);
+  font-style: italic;
+  color: var(--text-dim);
+  padding: 0.1rem 0.2rem;
+  transition: color 0.15s ease-out;
+}
+
+.scale-tab:hover {
+  color: var(--text-muted);
+}
+
+.scale-tab.is-active {
+  color: var(--text-main);
+}

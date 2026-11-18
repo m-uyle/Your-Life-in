@@ -1,0 +1,159 @@
+.stage {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 2.5vw, 3rem);
+}
+
+.stage > .board {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.stage.has-lens > .board {
+  visibility: hidden;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.lens {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+:is(.lens-stack, .cascade-level) {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+:is(.cascade-head, .lens-strip-head) {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  pointer-events: none;
+}
+
+.cascade-head {
+  font-style: italic;
+  font-size: var(--fs-ui);
+  line-height: 1.1;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.cascade-level.is-life .cascade-head {
+  font-size: var(--fs-label);
+  line-height: 1;
+}
+
+.cascade-head-right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.cascade-cv {
+  width: 100%;
+  height: 16px;
+  display: block;
+  touch-action: pan-y;
+}
+
+.zoom-funnel {
+  width: 100%;
+  height: clamp(1rem, 2.2dvh, 1.5rem);
+  flex: 0 0 auto;
+  display: block;
+  overflow: visible;
+}
+
+.zoom-funnel path {
+  fill: none;
+  stroke: var(--border-hover);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+
+.lens-strip {
+  flex: 1 1 0;
+  min-height: 0;
+  position: relative;
+  margin-top: 0.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.lens-strip-head {
+  margin-bottom: 0.25rem;
+  flex: 0 0 auto;
+}
+
+.lens-title-group {
+  display: inline-flex;
+  align-items: baseline;
+  line-height: 1;
+  gap: 0.25em;
+}
+
+.lens-metric-of {
+  margin-right: 0.1em;
+}
+
+.lens-metric-frac,
+.lens-metric-pct {
+  margin-left: -0.1em;
+}
+
+:is(.lens-metric-num, .lens-metric-frac) {
+  font-style: normal;
+  font-size: var(--fs-metric);
+  line-height: 1;
+  color: var(--text-main);
+  font-variant-numeric: tabular-nums;
+}
+
+.lens-metric-frac {
+  color: var(--text-frac);
+}
+
+:is(.lens-sub-label, .lens-metric-of, .lens-metric-pct) {
+  color: var(--text-dim);
+  font-style: italic;
+  font-size: var(--fs-ui);
+  line-height: 1;
+}
+
+:is(.lens-metric-arrow, .lens-metric-sep) {
+  color: var(--border-hover);
+  font-size: var(--fs-metric);
+  font-style: normal;
+  line-height: 1;
+}
+
+.lens-cv-wrap {
+  flex: 1 1 0;
+  min-height: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#lens-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: pan-y;
+}
+
+.lens-selection-box {
+  position: absolute;
+  pointer-events: none;
+  display: none;
+  border: 1px solid var(--text-main);
+  z-index: 10;
+}

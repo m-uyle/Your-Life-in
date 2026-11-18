@@ -1,0 +1,39 @@
+:is(.footer, .cascade-head-right, .lens-metric-num, .lens-metric-frac) {
+  font-variant-numeric: tabular-nums;
+}
+
+.footer {
+  width: 100%;
+  margin: 0 0.3%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: baseline;
+  column-gap: clamp(0.75rem, 1.5vw, 2rem);
+  row-gap: 0.5rem;
+  font-style: italic;
+  font-size: var(--fs-ui);
+  line-height: 1;
+  color: var(--text-dim);
+}
+
+.controls {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  line-height: 1;
+  gap: 0.1rem 0.2em;
+}
+
+:is(.birth-fields, .gender-switch, .ticker-main, .lens-title-group) {
+  display: inline-flex;
+  align-items: baseline;
+  line-height: 1;
+}
+
+:is(.birth-fields, .gender-switch) .sep,
+:is(.lens-metric-arrow, .lens-metric-sep, .ticker-sep) {
+  color: var(--border-hover);
+  font-size: var(--fs-metric);
+  font-style: normal;
+  line-height: 1;
+}

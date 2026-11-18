@@ -1,0 +1,17 @@
+{
+  "name": "your-life-in-fsd",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "Your Life in… — Feature-Sliced Design (FSD) architecture",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/build-bundle.mjs",
+    "preview": "vite preview",
+    "bundle": "node scripts/build-bundle.mjs"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

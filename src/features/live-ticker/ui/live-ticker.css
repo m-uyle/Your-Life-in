@@ -1,0 +1,71 @@
+.ticker-container {
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1;
+  font-size: clamp(0.72rem, 0.95vw, 1rem);
+}
+
+.ticker-main {
+  display: inline-flex;
+  align-items: baseline;
+  line-height: 1;
+}
+
+:is(.ticker-int, .ticker-frac, .ticker-total, .ticker-pct-int, .ticker-pct-frac) {
+  font-style: normal;
+  font-size: var(--fs-metric);
+  line-height: 1;
+  color: var(--text-main);
+  display: inline-flex;
+  align-items: baseline;
+}
+
+:is(.ticker-frac, .ticker-pct-frac) {
+  color: var(--text-frac);
+}
+
+.t-char-d {
+  display: inline-block;
+  width: var(--digit-w, 0.84ch);
+  text-align: center;
+}
+
+:is(.ticker-unit, .ticker-desc, .ticker-pct-sign) {
+  color: var(--text-dim);
+  font-style: italic;
+  line-height: 1;
+}
+
+.ticker-pct-sign {
+  font-size: var(--fs-ui);
+  margin-left: 0.08em;
+}
+
+.ticker-unit {
+  margin: 0 0.28em 0 0.2em;
+}
+
+.ticker-desc {
+  margin-right: 0.35em;
+}
+
+.ticker-sep {
+  color: var(--border-hover);
+  font-size: var(--fs-metric);
+  font-style: normal;
+  line-height: 1;
+  margin: 0 0.2em;
+}
+
+#hover-info {
+  color: var(--text-dim);
+  text-align: right;
+  min-height: calc(var(--fs-ui) * 1.45);
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+}

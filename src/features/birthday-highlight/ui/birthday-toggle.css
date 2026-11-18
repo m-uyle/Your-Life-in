@@ -1,0 +1,16 @@
+#bday-toggle {
+  font-style: italic;
+  color: var(--text-dim);
+  padding: 0 0.1em;
+  vertical-align: baseline;
+  transition: color 0.15s ease-out;
+}
+
+#bday-toggle:hover {
+  color: var(--text-muted);
+}
+
+#bday-toggle.is-on,
+#bday-toggle.is-on:hover {
+  color: var(--accent-lived);
+}

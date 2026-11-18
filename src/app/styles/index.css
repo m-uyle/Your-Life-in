@@ -1,0 +1,14 @@
+@import "./variables.css";
+@import "./base.css";
+@import "../../pages/life-map/ui/life-map-page.css";
+@import "../../widgets/header/ui/header.css";
+@import "../../features/scale-switcher/ui/scale-switcher.css";
+@import "../../widgets/decade-board/ui/decade-board.css";
+@import "../../widgets/footer-bar/ui/footer-bar.css";
+@import "../../features/birth-date-input/ui/birth-date-input.css";
+@import "../../features/birthday-highlight/ui/birthday-toggle.css";
+@import "../../features/gender-expectancy/ui/gender-switch.css";
+@import "../../features/live-ticker/ui/live-ticker.css";
+@import "../../widgets/magnified-lens/ui/magnified-lens.css";
+@import "../../shared/ui/tooltip/tooltip.css";
+@import "./animations-and-media.css";
